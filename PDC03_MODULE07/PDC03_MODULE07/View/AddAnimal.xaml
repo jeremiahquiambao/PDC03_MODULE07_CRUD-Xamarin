@@ -4,8 +4,9 @@
              x:Class="PDC03_MODULE07.View.AddAnimal">
     <ContentPage.Content>
         <StackLayout Margin="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-            <Entry x:Name="txtCharacteristics" Placeholder="Enter Characteristics"/>
+            <Entry x:Name="intID" Placeholder="Enter Animal Code" Keyboard="Numeric"/>
             <Entry x:Name="txtSpecies" Placeholder="Enter Species"/>
+            <Entry x:Name="txtCharacteristics" Placeholder="Enter Characteristics"/>
             <Entry x:Name="txtHabitat" Placeholder="Enter Habitat"/>
             <Entry x:Name="txtThreat" Placeholder="Enter Threat"/>
 

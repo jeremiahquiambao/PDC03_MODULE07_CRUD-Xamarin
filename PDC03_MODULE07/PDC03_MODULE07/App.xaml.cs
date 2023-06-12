@@ -10,7 +10,13 @@ namespace PDC03_MODULE07
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new View.ShowAnimalsPage());
+            // Create a new NavigationPage with ShowAnimalsPage as the root page
+            var navigationPage = new NavigationPage(new View.LandingPage());
+
+            // Set the BarBackgroundColor for the NavigationPage
+            navigationPage.BarBackgroundColor = Color.Black;
+
+            MainPage = navigationPage;
         }
 
         protected override void OnStart()

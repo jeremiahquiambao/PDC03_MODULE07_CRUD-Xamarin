@@ -47,8 +47,9 @@ namespace PDC03_MODULE07.View
         private async void btnSaveUpdate_Clicked(object sender, EventArgs e)
         {
             AnimalModel obj = new AnimalModel();
-            obj.Characteristics = txtCharacteristics.Text;
+            obj.ID = animalID;
             obj.Species = txtSpecies.Text;
+            obj.Characteristics = txtCharacteristics.Text;
             obj.Habitat = txtHabitat.Text;
             obj.Threat = txtThreat.Text;
 

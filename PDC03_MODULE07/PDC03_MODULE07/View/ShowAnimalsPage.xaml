@@ -4,7 +4,6 @@
              x:Class="PDC03_MODULE07.View.ShowAnimalsPage">
     <ContentPage.Content>
         <StackLayout Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Button Text="Add New Record" Clicked="btnAddRecord_Clicked" x:Name="btnAddRecord"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -14,11 +13,14 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Text="Characteristics" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0"/>
+                
+                <Label Text="Animal Code" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0"/>
                 <Label Text="Species" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Habitat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
-                <Label Text="Threat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="3"/>
+                <Label Text="Characteristics" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Habitat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="3"/>
+                <Label Text="Threat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="4"/>
 
             </Grid>
 
@@ -38,10 +40,12 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding Characteristics}" Grid.Row="0" Grid.Column="0"/>
+
+                                    <Label Text="{Binding ID}" Grid.Row="0" Grid.Column="0"/>
                                     <Label Text="{Binding Species}" Grid.Row="0" Grid.Column="1"/>
-                                    <Label Text="{Binding Habitat}" Grid.Row="0" Grid.Column="2"/>
-                                    <Label Text="{Binding Threat}" Grid.Row="0" Grid.Column="3"/>
+                                    <Label Text="{Binding Characteristics}" Grid.Row="0" Grid.Column="2"/>
+                                    <Label Text="{Binding Habitat}" Grid.Row="0" Grid.Column="3"/>
+                                    <Label Text="{Binding Threat}" Grid.Row="0" Grid.Column="4"/>
 
                                 </Grid>
                             </Frame>
@@ -49,7 +53,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <Button Text="Add New Record" Clicked="btnAddRecord_Clicked" x:Name="btnAddRecord" FontAttributes="Bold" TextColor="Black" BackgroundColor="LimeGreen"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

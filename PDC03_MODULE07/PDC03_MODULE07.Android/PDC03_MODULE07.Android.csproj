@@ -87,9 +87,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PDC03_MODULE07\PDC03_FinalProjectAnimalWelfare.csproj">
+    <ProjectReference Include="..\PDC03_MODULE07\PDC03_MODULE07.csproj">
       <Project>{1B9C128C-D13F-4A51-92EC-9C8E61BE954E}</Project>
-      <Name>PDC03_FinalProjectAnimalWelfare</Name>
+      <Name>PDC03_MODULE07</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
