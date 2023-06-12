@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MODULE07.View.ShowAnimalsPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Button Text="Add New Record" Clicked="btnAddRecord_Clicked" x:Name="btnAddRecord"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="Characteristics" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Species" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Habitat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Threat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="3"/>
+
+            </Grid>
+
+            <ListView x:Name="lstData" HasUnevenRows="True" ItemSelected="lstData_ItemsSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Characteristics}" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding Species}" Grid.Row="0" Grid.Column="1"/>
+                                    <Label Text="{Binding Habitat}" Grid.Row="0" Grid.Column="2"/>
+                                    <Label Text="{Binding Threat}" Grid.Row="0" Grid.Column="3"/>
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

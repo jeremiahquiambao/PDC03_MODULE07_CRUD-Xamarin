@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -87,10 +87,10 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PDC03_MODULE07\PDC03_MODULE07.csproj">
-      <Project>{6698E946-A82F-4D71-A678-D42507A7D05A}</Project>
-      <Name>PDC03_MODULE07</Name>
+    <ProjectReference Include="..\PDC03_MODULE07\PDC03_FinalProjectAnimalWelfare.csproj">
+      <Project>{1B9C128C-D13F-4A51-92EC-9C8E61BE954E}</Project>
+      <Name>PDC03_FinalProjectAnimalWelfare</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

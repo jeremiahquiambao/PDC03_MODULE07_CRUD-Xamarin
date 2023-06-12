@@ -10,7 +10,7 @@ namespace PDC03_MODULE07
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new View.ShowEmployeePage());
+            MainPage = new NavigationPage(new View.ShowAnimalsPage());
         }
 
         protected override void OnStart()

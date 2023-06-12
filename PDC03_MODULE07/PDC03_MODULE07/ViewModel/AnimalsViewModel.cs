@@ -10,48 +10,48 @@ using System.Threading.Tasks;
 
 namespace PDC03_MODULE07.ViewModel
 {
-    public class EmployeeViewModel
+    public class AnimalsViewModel
     {
         // Call Database 
 
-        private Services.DatabaseContext getContext()
+        private Services.DatabaseContextAnimals getContext()
         {
-            return new Services.DatabaseContext();
+            return new Services.DatabaseContextAnimals();
 
         }
-        
+
         // Insert Records
-        public int InsertEmployee(EmployeeModel obj)
+        public int InsertAnimal(AnimalModel obj)
         {
             var _dbContext = getContext();
-            _dbContext.Employees.Add(obj);
+            _dbContext.Animals.Add(obj);
             int c = _dbContext.SaveChanges();
-            return c; 
+            return c;
         }
 
         // Retrieves Records 
 
-        public async Task<List<EmployeeModel>> GetAllEmployees()
+        public async Task<List<AnimalModel>> GetAllAnimals()
         {
             var _dbContext = getContext();
-            var res = await _dbContext.Employees.ToListAsync();
+            var res = await _dbContext.Animals.ToListAsync();
             return res;
         }
 
         // Delete Records
-        public int DeleteEmployee(EmployeeModel obj)
+        public int DeleteAnimal(AnimalModel obj)
         {
             var _dbContext = getContext();
-            _dbContext.Employees.Remove(obj);
+            _dbContext.Animals.Remove(obj);
             int c = _dbContext.SaveChanges();
             return c;
         }
 
         // Update Records 
-        public async Task<int> UpdateEmployee(EmployeeModel obj)
+        public async Task<int> UpdateAnimal(AnimalModel obj)
         {
             var _dbContext = getContext();
-            _dbContext.Employees.Update(obj);
+            _dbContext.Animals.Update(obj);
             int c = await _dbContext.SaveChangesAsync();
             return c;
         }
