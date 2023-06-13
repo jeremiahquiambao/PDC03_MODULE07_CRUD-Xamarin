@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PDC03_MODULE07.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace PDC03_MODULE07
         public MainPage()
         {
             InitializeComponent();
+        }
+        private async void LearnMoreButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new View.AnimalImportancePage());
         }
     }
 }

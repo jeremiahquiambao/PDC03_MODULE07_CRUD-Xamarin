@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MODULE07.View.AnimalImportancePage"
+             BackgroundColor="Black">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="The Importance of Animals and the Urgency of Protecting Endangered Species"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="20,3,20,0"
+                   TextColor="YellowGreen"   />
+
+            <Label Text="Animals play a crucial role in maintaining the delicate balance of our planet's ecosystems. From the tiniest insects to the magnificent apex predators, every species has its own unique contribution to the web of life. However, in recent years, the alarming decline of many animal populations has raised concerns about the future of our planet. Understanding the importance of animals and the urgency of protecting endangered species is essential for the well-being of our environment and future generations."
+                   FontSize="18"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand" 
+                   Margin="20,3,20,0"
+                   TextColor="White"/>
+
+            <Label Text="Animals are an integral part of Earth's biodiversity. They are interconnected with plants, microorganisms, and their surroundings in complex ecological relationships. Biodiversity ensures ecosystem stability by supporting vital processes such as pollination, seed dispersal, nutrient cycling, and pest control. When a species becomes endangered or goes extinct, it disrupts these interconnected relationships, causing imbalances that can have far-reaching consequences."
+                   FontSize="18"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="20,3,20,0"
+                   TextColor="White"/>
+
+
+            <!-- Continue adding the remaining sections with their respective labels -->
+
+            <Button Text="Know More Endangered Animals"
+                    Clicked="KnowMoreButton_Clicked"
+                     HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    BackgroundColor="LimeGreen" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
