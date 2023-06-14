@@ -33,9 +33,10 @@ namespace PDC03_MODULE07.View
             _viewModel = new AnimalsViewModel();
             if (obj != null)
             {
-                animalID = obj.ID;
-                txtCharacteristics.Text = obj.Characteristics;
+                animalID = obj.Id;
+                txtAnimalCode.Text = obj.AnimalCode;
                 txtSpecies.Text = obj.Species;
+                txtCharacteristics.Text = obj.Characteristics;
                 txtHabitat.Text = obj.Habitat;
                 txtThreat.Text = obj.Threat;
                 _isUpdate = true;
@@ -47,7 +48,8 @@ namespace PDC03_MODULE07.View
         private async void btnSaveUpdate_Clicked(object sender, EventArgs e)
         {
             AnimalModel obj = new AnimalModel();
-            obj.ID = animalID;
+            //obj.ID = animalID;
+            obj.AnimalCode= txtAnimalCode.Text;
             obj.Species = txtSpecies.Text;
             obj.Characteristics = txtCharacteristics.Text;
             obj.Habitat = txtHabitat.Text;
@@ -56,7 +58,7 @@ namespace PDC03_MODULE07.View
 
             if (_isUpdate)
             {
-                obj.ID = animalID;
+                obj.Id = animalID;
                 await _viewModel.UpdateAnimal(obj);
             }
             else
